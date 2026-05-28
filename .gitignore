@@ -1,0 +1,9 @@
+ejecutar_scripts.txt
+.venv
+**/__pycache__
+pruebas_streamlit.py
+pruebas.ipynb
+Series_Prueba
+StreamlitCallbackHandler.py
+ChunkAgent.py
+.env
