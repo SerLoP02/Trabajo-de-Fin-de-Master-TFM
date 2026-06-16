@@ -1,0 +1,31 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: tfm-api
+    command: uvicorn api:api --host 0.0.0.0 --port 8000
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: tfm-frontend
+    command: streamlit run app_con_api.py --server.port=8501 --server.address=0.0.0.0
+    ports:
+      - "8501:8501"
+    depends_on:
+      - api
+    env_file:
+      - .env
+    environment:
+      - API_URL=http://api:8000
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
