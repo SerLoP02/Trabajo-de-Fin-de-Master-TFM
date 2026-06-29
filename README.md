@@ -1,3 +1,8 @@
+
+
+https://github.com/user-attachments/assets/24d29369-1efa-4321-bfa0-f9d1111c5c2b
+
+
 # Agente de Series Temporales 📈
 
 Este proyecto es el Trabajo de Fin de Máster (TFM) y consiste en el desarrollo de un **Agente de Inteligencia Artificial para el Análisis y Predicción de Series Temporales**, construido utilizando **LangGraph**, **FastAPI** y **Streamlit**. 
